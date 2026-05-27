@@ -4,52 +4,60 @@ export default function Home() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <div style={styles.heroBox}>
+        <div style={styles.heroOverlay}>
           <h1 style={styles.title}>AUTODOPRAVA KRNOV</h1>
 
           <p style={styles.subtitle}>
-            Přeprava sypkých hmot ve velkoobjemových kontejnerech
+            Přeprava sypkých hmot • velkoobjemové kontejnery • až 80 m³
           </p>
 
-          <p style={styles.bigText}>
-            Až <b>80 m³</b> • kontejnery • rychlá doprava • spolehlivý servis
-          </p>
+          <button style={styles.button}>📞 Zavolat +420 737 88 66 32</button>
         </div>
       </section>
 
+      {/* O FIRMĚ */}
+      <section style={styles.split}>
+        <div style={styles.textBlock}>
+          <h2>Spolehlivá autodoprava</h2>
+          <p>
+            Specializujeme se na přepravu sypkých materiálů, stavební sutě,
+            zeminy a dalších komodit ve velkoobjemových kontejnerech.
+          </p>
+          <p>
+            Nabízíme kontejnery až do <b>80 m³</b> a individuální přístup ke každé zakázce.
+          </p>
+        </div>
+
+        <img src="/kontejner.jpg" style={styles.image} />
+      </section>
+
       {/* SLUŽBY */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Naše služby</h2>
+      <section style={styles.services}>
+        <h2>Naše služby</h2>
 
         <div style={styles.grid}>
           <div style={styles.card}>🚛 Přeprava sypkých materiálů</div>
           <div style={styles.card}>📦 Velkoobjemové kontejnery</div>
-          <div style={styles.card}>⚙️ Až 80 m³ kapacita</div>
-          <div style={styles.card}>🏗️ Stavební a zemní materiál</div>
-          <div style={styles.card}>📞 Individuální zakázky</div>
-          <div style={styles.card}>⚡ Rychlá domluva</div>
+          <div style={styles.card}>🏗️ Stavební a zemní práce</div>
+          <div style={styles.card}>⚡ Expresní doprava</div>
         </div>
       </section>
 
-      {/* KONTEJNERY INFO */}
-      <section style={styles.dark}>
-        <h2 style={styles.h2}>Velkoobjemové kontejnery</h2>
+      {/* GALERIE */}
+      <section style={styles.gallerySection}>
+        <h2>Naše technika</h2>
 
-        <div style={styles.box}>
-          <p>
-            Specializujeme se na přepravu a pronájem velkoobjemových kontejnerů
-            pro sypké materiály, stavební suť, zeminu a další náklady.
-          </p>
-
-          <p style={{ marginTop: "15px" }}>
-            💡 <b>Cena dle telefonické domluvy</b>
-          </p>
+        <div style={styles.gallery}>
+          <img src="/preprava.jpg" />
+          <img src="/preprava2.jpg" />
+          <img src="/kontejner.jpg" />
+          <img src="/hero1.jpg" />
         </div>
       </section>
 
       {/* KONTAKT */}
       <section style={styles.contact}>
-        <h2 style={styles.h2}>Kontakt</h2>
+        <h2>Kontakt</h2>
 
         <div style={styles.contactBox}>
           <p>📍 Opavská 593/61, Krnov</p>
@@ -63,100 +71,126 @@ export default function Home() {
 }
 
 const styles: any = {
+
   page: {
-    fontFamily: "Arial, sans-serif",
-    background: "#0b1220",
-    color: "white",
+    fontFamily: "Arial",
+    background: "#f4f4f4",
+    color: "#111",
   },
 
+  /* HERO */
   hero: {
     height: "90vh",
-    backgroundImage: "url('/hero.jpg')",
+    backgroundImage: "url('/hero1.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center",
   },
 
-  heroBox: {
-    background: "rgba(0,0,0,0.65)",
-    padding: "40px",
-    borderRadius: "18px",
-    maxWidth: "800px",
-    backdropFilter: "blur(6px)",
+  heroOverlay: {
+    background: "rgba(0,0,0,0.55)",
+    padding: "50px",
+    borderRadius: "20px",
+    textAlign: "center",
+    color: "white",
   },
 
   title: {
-    fontSize: "60px",
+    fontSize: "64px",
     marginBottom: "10px",
+    letterSpacing: "2px",
   },
 
   subtitle: {
-    fontSize: "20px",
+    fontSize: "18px",
     opacity: 0.9,
-    marginBottom: "10px",
+    marginBottom: "20px",
   },
 
-  bigText: {
+  button: {
+    padding: "12px 20px",
+    background: "#ff6a00",
+    border: "none",
+    borderRadius: "10px",
+    color: "white",
     fontSize: "16px",
-    opacity: 0.8,
+    cursor: "pointer",
   },
 
-  section: {
-    padding: "80px 20px",
+  /* SPLIT SECTION */
+  split: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    gap: "40px",
+    padding: "80px 10%",
+    background: "white",
+  },
+
+  textBlock: {
+    flex: 1,
+    minWidth: "280px",
+    fontSize: "18px",
+    lineHeight: "1.6",
+  },
+
+  image: {
+    flex: 1,
+    minWidth: "280px",
+    width: "100%",
+    borderRadius: "16px",
+  },
+
+  /* SERVICES */
+  services: {
+    padding: "80px 10%",
+    background: "#111",
+    color: "white",
     textAlign: "center",
-  },
-
-  dark: {
-    padding: "80px 20px",
-    textAlign: "center",
-    background: "#0f172a",
-  },
-
-  h2: {
-    fontSize: "34px",
-    marginBottom: "30px",
   },
 
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
     gap: "20px",
-    maxWidth: "900px",
-    margin: "0 auto",
+    marginTop: "30px",
   },
 
   card: {
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
+    background: "#1c1c1c",
     padding: "20px",
-    borderRadius: "14px",
+    borderRadius: "12px",
   },
 
-  box: {
-    maxWidth: "600px",
-    margin: "0 auto",
-    background: "rgba(255,255,255,0.05)",
-    padding: "25px",
-    borderRadius: "14px",
-    border: "1px solid rgba(255,255,255,0.1)",
-    lineHeight: "1.7",
+  /* GALLERY */
+  gallerySection: {
+    padding: "80px 10%",
+    background: "#f4f4f4",
+    textAlign: "center",
   },
 
+  gallery: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "15px",
+    marginTop: "30px",
+  },
+
+  /* CONTACT */
   contact: {
-    padding: "80px 20px",
+    padding: "80px 10%",
+    background: "#111",
+    color: "white",
     textAlign: "center",
   },
 
   contactBox: {
-    maxWidth: "420px",
-    margin: "0 auto",
-    background: "rgba(255,255,255,0.05)",
+    marginTop: "20px",
+    display: "inline-block",
     padding: "25px",
-    borderRadius: "14px",
-    border: "1px solid rgba(255,255,255,0.1)",
-    lineHeight: "1.8",
+    background: "#1c1c1c",
+    borderRadius: "12px",
   },
 };

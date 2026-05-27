@@ -5,54 +5,45 @@ export default function Home() {
       {/* HERO */}
       <section style={styles.hero}>
         <div style={styles.heroBox}>
-          <h1 style={styles.title}>PNEUSERVIS KRNOV</h1>
+          <h1 style={styles.title}>AUTODOPRAVA KRNOV</h1>
 
           <p style={styles.subtitle}>
-            Rychlý a spolehlivý pneuservis pro osobní i dodávky
+            Přeprava sypkých hmot ve velkoobjemových kontejnerech
           </p>
 
-          <p style={styles.badges}>
-            🔧 přezutí • ⚙️ vyvážení • 🚗 opravy defektů • ⏱️ expres servis
+          <p style={styles.bigText}>
+            Až <b>80 m³</b> • kontejnery • rychlá doprava • spolehlivý servis
           </p>
-        </div>
-      </section>
-
-      {/* INFO */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Proč právě my</h2>
-
-        <div style={styles.grid}>
-          <div style={styles.card}>⚡ Rychlé objednání i bez čekání</div>
-          <div style={styles.card}>💰 Férové ceny bez skrytých poplatků</div>
-          <div style={styles.card}>🔧 Profesionální vybavení</div>
-          <div style={styles.card}>🚗 Osobní i dodávkové vozy</div>
         </div>
       </section>
 
       {/* SLUŽBY */}
-      <section style={styles.dark}>
-        <h2 style={styles.h2}>Služby</h2>
+      <section style={styles.section}>
+        <h2 style={styles.h2}>Naše služby</h2>
 
         <div style={styles.grid}>
-          <div style={styles.card}>Přezutí pneumatik</div>
-          <div style={styles.card}>Vyvážení kol</div>
-          <div style={styles.card}>Opravy defektů</div>
-          <div style={styles.card}>Kontrola tlaku</div>
-          <div style={styles.card}>Sezónní uskladnění</div>
-          <div style={styles.card}>Expresní servis</div>
+          <div style={styles.card}>🚛 Přeprava sypkých materiálů</div>
+          <div style={styles.card}>📦 Velkoobjemové kontejnery</div>
+          <div style={styles.card}>⚙️ Až 80 m³ kapacita</div>
+          <div style={styles.card}>🏗️ Stavební a zemní materiál</div>
+          <div style={styles.card}>📞 Individuální zakázky</div>
+          <div style={styles.card}>⚡ Rychlá domluva</div>
         </div>
       </section>
 
-      {/* OTEVÍRACÍ DOBA */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Otevírací doba</h2>
+      {/* KONTEJNERY INFO */}
+      <section style={styles.dark}>
+        <h2 style={styles.h2}>Velkoobjemové kontejnery</h2>
 
         <div style={styles.box}>
-          <p>Pondělí – Pátek: 9:00 – 17:00</p>
-          <p>Sobota: 9:00 – 14:00</p>
-          <p>Neděle: po domluvě</p>
-          <br />
-          <b>Nonstop po telefonické domluvě</b>
+          <p>
+            Specializujeme se na přepravu a pronájem velkoobjemových kontejnerů
+            pro sypké materiály, stavební suť, zeminu a další náklady.
+          </p>
+
+          <p style={{ marginTop: "15px" }}>
+            💡 <b>Cena dle telefonické domluvy</b>
+          </p>
         </div>
       </section>
 
@@ -62,8 +53,8 @@ export default function Home() {
 
         <div style={styles.contactBox}>
           <p>📍 Opavská 593/61, Krnov</p>
-          <p>📞 737 886 632</p>
-          <p>⚡ Rychlá domluva – zavolej kdykoliv</p>
+          <p>📞 +420 737 88 66 32</p>
+          <p>💰 Cena po telefonické domluvě</p>
         </div>
       </section>
 
@@ -74,7 +65,7 @@ export default function Home() {
 const styles: any = {
   page: {
     fontFamily: "Arial, sans-serif",
-    background: "#0a0f1c",
+    background: "#0b1220",
     color: "white",
   },
 
@@ -87,13 +78,12 @@ const styles: any = {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    position: "relative",
   },
 
   heroBox: {
     background: "rgba(0,0,0,0.65)",
     padding: "40px",
-    borderRadius: "20px",
+    borderRadius: "18px",
     maxWidth: "800px",
     backdropFilter: "blur(6px)",
   },
@@ -101,17 +91,16 @@ const styles: any = {
   title: {
     fontSize: "60px",
     marginBottom: "10px",
-    letterSpacing: "2px",
   },
 
   subtitle: {
-    fontSize: "18px",
+    fontSize: "20px",
     opacity: 0.9,
-    marginBottom: "15px",
+    marginBottom: "10px",
   },
 
-  badges: {
-    fontSize: "14px",
+  bigText: {
+    fontSize: "16px",
     opacity: 0.8,
   },
 
@@ -122,8 +111,8 @@ const styles: any = {
 
   dark: {
     padding: "80px 20px",
-    background: "#0f172a",
     textAlign: "center",
+    background: "#0f172a",
   },
 
   h2: {
@@ -143,24 +132,22 @@ const styles: any = {
     background: "rgba(255,255,255,0.05)",
     border: "1px solid rgba(255,255,255,0.1)",
     padding: "20px",
-    borderRadius: "16px",
-    backdropFilter: "blur(4px)",
+    borderRadius: "14px",
   },
 
   box: {
-    maxWidth: "420px",
+    maxWidth: "600px",
     margin: "0 auto",
     background: "rgba(255,255,255,0.05)",
     padding: "25px",
-    borderRadius: "16px",
-    lineHeight: "1.8",
+    borderRadius: "14px",
     border: "1px solid rgba(255,255,255,0.1)",
+    lineHeight: "1.7",
   },
 
   contact: {
     padding: "80px 20px",
     textAlign: "center",
-    background: "#0a0f1c",
   },
 
   contactBox: {
@@ -168,8 +155,8 @@ const styles: any = {
     margin: "0 auto",
     background: "rgba(255,255,255,0.05)",
     padding: "25px",
-    borderRadius: "16px",
-    lineHeight: "1.8",
+    borderRadius: "14px",
     border: "1px solid rgba(255,255,255,0.1)",
+    lineHeight: "1.8",
   },
 };

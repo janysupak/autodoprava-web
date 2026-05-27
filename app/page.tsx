@@ -4,62 +4,60 @@ export default function Home() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <div style={styles.heroOverlay}>
+        <div style={styles.heroCard}>
           <h1 style={styles.title}>AUTODOPRAVA KRNOV</h1>
 
           <p style={styles.subtitle}>
             Přeprava sypkých hmot • velkoobjemové kontejnery • až 80 m³
           </p>
 
-          <button style={styles.button}>📞 Zavolat +420 737 88 66 32</button>
-        </div>
-      </section>
-
-      {/* O FIRMĚ */}
-      <section style={styles.split}>
-        <div style={styles.textBlock}>
-          <h2>Spolehlivá autodoprava</h2>
-          <p>
-            Specializujeme se na přepravu sypkých materiálů, stavební sutě,
-            zeminy a dalších komodit ve velkoobjemových kontejnerech.
-          </p>
-          <p>
-            Nabízíme kontejnery až do <b>80 m³</b> a individuální přístup ke každé zakázce.
+          <p style={styles.cta}>
+            📞 +420 737 88 66 32
           </p>
         </div>
-
-        <img src="/kontejner.jpg" style={styles.image} />
       </section>
 
-      {/* SLUŽBY */}
-      <section style={styles.services}>
-        <h2>Naše služby</h2>
-
-        <div style={styles.grid}>
-          <div style={styles.card}>🚛 Přeprava sypkých materiálů</div>
-          <div style={styles.card}>📦 Velkoobjemové kontejnery</div>
-          <div style={styles.card}>🏗️ Stavební a zemní práce</div>
-          <div style={styles.card}>⚡ Expresní doprava</div>
+      {/* INFO BOX */}
+      <section style={styles.center}>
+        <div style={styles.infoBox}>
+          <h2>O nás</h2>
+          <p>
+            Specializujeme se na přepravu sypkých materiálů a zemních prací
+            ve velkoobjemových kontejnerech.
+          </p>
+          <p>
+            Nabízíme kontejnery až <b>80 m³</b> a individuální přístup ke každé zakázce.
+          </p>
         </div>
       </section>
 
-      {/* GALERIE */}
+      {/* SLUŽBY BOX */}
+      <section style={styles.center}>
+        <div style={styles.infoBoxDark}>
+          <h2>Služby</h2>
+
+          <p>🚛 Přeprava sypkých materiálů</p>
+          <p>📦 Velkoobjemové kontejnery</p>
+          <p>🏗️ Stavební suť a zemina</p>
+          <p>⚡ Rychlé zakázky po domluvě</p>
+        </div>
+      </section>
+
+      {/* GALERIE (jen 3 fotky) */}
       <section style={styles.gallerySection}>
         <h2>Naše technika</h2>
 
         <div style={styles.gallery}>
-          <img src="/preprava.jpg" />
-          <img src="/preprava2.jpg" />
-          <img src="/kontejner.jpg" />
           <img src="/hero1.jpg" />
+          <img src="/preprava.jpg" />
+          <img src="/kontejner.jpg" />
         </div>
       </section>
 
       {/* KONTAKT */}
-      <section style={styles.contact}>
-        <h2>Kontakt</h2>
-
+      <section style={styles.center}>
         <div style={styles.contactBox}>
+          <h2>Kontakt</h2>
           <p>📍 Opavská 593/61, Krnov</p>
           <p>📞 +420 737 88 66 32</p>
           <p>💰 Cena po telefonické domluvě</p>
@@ -74,8 +72,8 @@ const styles: any = {
 
   page: {
     fontFamily: "Arial",
-    background: "#f4f4f4",
-    color: "#111",
+    background: "#0b0f14",
+    color: "white",
   },
 
   /* HERO */
@@ -89,85 +87,72 @@ const styles: any = {
     justifyContent: "center",
   },
 
-  heroOverlay: {
-    background: "rgba(0,0,0,0.55)",
+  heroCard: {
+    background: "rgba(0,0,0,0.7)",
     padding: "50px",
-    borderRadius: "20px",
+    borderRadius: "18px",
     textAlign: "center",
-    color: "white",
+    maxWidth: "700px",
+    border: "1px solid rgba(255,255,255,0.1)",
   },
 
   title: {
-    fontSize: "64px",
+    fontSize: "58px",
     marginBottom: "10px",
-    letterSpacing: "2px",
   },
 
   subtitle: {
     fontSize: "18px",
-    opacity: 0.9,
-    marginBottom: "20px",
+    opacity: 0.85,
   },
 
-  button: {
-    padding: "12px 20px",
-    background: "#ff6a00",
-    border: "none",
-    borderRadius: "10px",
-    color: "white",
-    fontSize: "16px",
-    cursor: "pointer",
+  cta: {
+    marginTop: "20px",
+    fontSize: "20px",
+    fontWeight: "bold",
+    color: "#ff7a00",
   },
 
-  /* SPLIT SECTION */
-  split: {
+  /* CENTER WRAPPERS */
+  center: {
     display: "flex",
-    flexWrap: "wrap",
-    alignItems: "center",
-    gap: "40px",
-    padding: "80px 10%",
-    background: "white",
+    justifyContent: "center",
+    padding: "70px 20px",
   },
 
-  textBlock: {
-    flex: 1,
-    minWidth: "280px",
-    fontSize: "18px",
+  infoBox: {
+    maxWidth: "700px",
+    background: "white",
+    color: "black",
+    padding: "30px",
+    borderRadius: "14px",
+    textAlign: "center",
     lineHeight: "1.6",
   },
 
-  image: {
-    flex: 1,
-    minWidth: "280px",
-    width: "100%",
-    borderRadius: "16px",
-  },
-
-  /* SERVICES */
-  services: {
-    padding: "80px 10%",
-    background: "#111",
-    color: "white",
+  infoBoxDark: {
+    maxWidth: "700px",
+    background: "#151b22",
+    padding: "30px",
+    borderRadius: "14px",
     textAlign: "center",
+    border: "1px solid #2a3440",
+    lineHeight: "1.8",
   },
 
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-    gap: "20px",
-    marginTop: "30px",
-  },
-
-  card: {
-    background: "#1c1c1c",
-    padding: "20px",
-    borderRadius: "12px",
+  contactBox: {
+    maxWidth: "700px",
+    background: "#151b22",
+    padding: "30px",
+    borderRadius: "14px",
+    textAlign: "center",
+    border: "1px solid #2a3440",
+    lineHeight: "1.8",
   },
 
   /* GALLERY */
   gallerySection: {
-    padding: "80px 10%",
-    background: "#f4f4f4",
+    padding: "70px 20px",
     textAlign: "center",
   },
 
@@ -175,22 +160,7 @@ const styles: any = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: "15px",
-    marginTop: "30px",
-  },
-
-  /* CONTACT */
-  contact: {
-    padding: "80px 10%",
-    background: "#111",
-    color: "white",
-    textAlign: "center",
-  },
-
-  contactBox: {
-    marginTop: "20px",
-    display: "inline-block",
-    padding: "25px",
-    background: "#1c1c1c",
-    borderRadius: "12px",
+    maxWidth: "900px",
+    margin: "30px auto 0",
   },
 };

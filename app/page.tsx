@@ -4,61 +4,66 @@ export default function Home() {
 
       {/* HERO */}
       <section style={styles.hero}>
-        <div style={styles.overlay}>
-          <h1 style={styles.title}>AUTODOPRAVA KRNOV</h1>
+        <div style={styles.heroBox}>
+          <h1 style={styles.title}>PNEUSERVIS KRNOV</h1>
 
           <p style={styles.subtitle}>
-            Spolehlivá doprava a rychlé služby
+            Rychlý a spolehlivý pneuservis pro osobní i dodávky
           </p>
+
+          <p style={styles.badges}>
+            🔧 přezutí • ⚙️ vyvážení • 🚗 opravy defektů • ⏱️ expres servis
+          </p>
+        </div>
+      </section>
+
+      {/* INFO */}
+      <section style={styles.section}>
+        <h2 style={styles.h2}>Proč právě my</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.card}>⚡ Rychlé objednání i bez čekání</div>
+          <div style={styles.card}>💰 Férové ceny bez skrytých poplatků</div>
+          <div style={styles.card}>🔧 Profesionální vybavení</div>
+          <div style={styles.card}>🚗 Osobní i dodávkové vozy</div>
         </div>
       </section>
 
       {/* SLUŽBY */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Naše služby</h2>
+      <section style={styles.dark}>
+        <h2 style={styles.h2}>Služby</h2>
 
-        <div style={styles.serviceBox}>
-          <p style={styles.serviceText}>
-            ✔ Vnitrostátní autodoprava
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ Převoz materiálu a zboží
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ Rychlá doprava po domluvě
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ Individuální přístup ke každé zakázce
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ Spolehlivost a férové ceny
-          </p>
+        <div style={styles.grid}>
+          <div style={styles.card}>Přezutí pneumatik</div>
+          <div style={styles.card}>Vyvážení kol</div>
+          <div style={styles.card}>Opravy defektů</div>
+          <div style={styles.card}>Kontrola tlaku</div>
+          <div style={styles.card}>Sezónní uskladnění</div>
+          <div style={styles.card}>Expresní servis</div>
         </div>
       </section>
 
-      {/* GALERIE */}
-      <section style={styles.dark}>
-        <h2 style={styles.h2}>Naše vozidla</h2>
+      {/* OTEVÍRACÍ DOBA */}
+      <section style={styles.section}>
+        <h2 style={styles.h2}>Otevírací doba</h2>
 
-        <div style={styles.gallery}>
-          <img src="/preprava.jpg" style={styles.img} />
-          <img src="/kontejner.jpg" style={styles.img} />
-          <img src="/preprava2.jpg" style={styles.img} />
+        <div style={styles.box}>
+          <p>Pondělí – Pátek: 9:00 – 17:00</p>
+          <p>Sobota: 9:00 – 14:00</p>
+          <p>Neděle: po domluvě</p>
+          <br />
+          <b>Nonstop po telefonické domluvě</b>
         </div>
       </section>
 
       {/* KONTAKT */}
-      <section style={styles.section}>
+      <section style={styles.contact}>
         <h2 style={styles.h2}>Kontakt</h2>
 
         <div style={styles.contactBox}>
+          <p>📍 Opavská 593/61, Krnov</p>
           <p>📞 737 886 632</p>
-          <p>📍 Krnov a okolí</p>
-          <p>⚡ Rychlé jednání</p>
+          <p>⚡ Rychlá domluva – zavolej kdykoliv</p>
         </div>
       </section>
 
@@ -69,12 +74,12 @@ export default function Home() {
 const styles: any = {
   page: {
     fontFamily: "Arial, sans-serif",
-    background: "#0b1220",
+    background: "#0a0f1c",
     color: "white",
   },
 
   hero: {
-    height: "70vh",
+    height: "90vh",
     backgroundImage: "url('/hero.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -82,77 +87,89 @@ const styles: any = {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
+    position: "relative",
   },
 
-  overlay: {
+  heroBox: {
     background: "rgba(0,0,0,0.65)",
     padding: "40px",
-    borderRadius: "18px",
+    borderRadius: "20px",
+    maxWidth: "800px",
+    backdropFilter: "blur(6px)",
   },
 
   title: {
-    fontSize: "56px",
+    fontSize: "60px",
     marginBottom: "10px",
+    letterSpacing: "2px",
   },
 
   subtitle: {
-    fontSize: "20px",
+    fontSize: "18px",
     opacity: 0.9,
+    marginBottom: "15px",
+  },
+
+  badges: {
+    fontSize: "14px",
+    opacity: 0.8,
   },
 
   section: {
-    padding: "90px 20px",
+    padding: "80px 20px",
     textAlign: "center",
   },
 
   dark: {
-    padding: "90px 20px",
-    background: "#111827",
+    padding: "80px 20px",
+    background: "#0f172a",
     textAlign: "center",
   },
 
   h2: {
-    fontSize: "38px",
-    marginBottom: "35px",
+    fontSize: "34px",
+    marginBottom: "30px",
   },
 
-  serviceBox: {
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px",
     maxWidth: "900px",
     margin: "0 auto",
-    background: "#111827",
-    padding: "35px",
-    borderRadius: "18px",
-    textAlign: "left",
-    lineHeight: "2",
   },
 
-  serviceText: {
-    fontSize: "22px",
-    marginBottom: "15px",
+  card: {
+    background: "rgba(255,255,255,0.05)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    padding: "20px",
+    borderRadius: "16px",
+    backdropFilter: "blur(4px)",
   },
 
-  gallery: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "20px",
-    maxWidth: "1100px",
+  box: {
+    maxWidth: "420px",
     margin: "0 auto",
+    background: "rgba(255,255,255,0.05)",
+    padding: "25px",
+    borderRadius: "16px",
+    lineHeight: "1.8",
+    border: "1px solid rgba(255,255,255,0.1)",
   },
 
-  img: {
-    width: "100%",
-    height: "260px",
-    objectFit: "cover",
-    borderRadius: "18px",
+  contact: {
+    padding: "80px 20px",
+    textAlign: "center",
+    background: "#0a0f1c",
   },
 
   contactBox: {
-    maxWidth: "500px",
+    maxWidth: "420px",
     margin: "0 auto",
-    background: "#111827",
-    padding: "30px",
-    borderRadius: "18px",
-    lineHeight: "2",
-    fontSize: "22px",
+    background: "rgba(255,255,255,0.05)",
+    padding: "25px",
+    borderRadius: "16px",
+    lineHeight: "1.8",
+    border: "1px solid rgba(255,255,255,0.1)",
   },
 };

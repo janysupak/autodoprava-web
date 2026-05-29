@@ -102,16 +102,18 @@ const styles: any = {
   },
 
   /* HERO */
-  hero: {
-    height: "92vh",
-    backgroundImage: "url('/hero1.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "20px",
-  },
+  /* HERO */
+hero: {
+  height: "92vh",
+  backgroundImage: "url('/kamion1.jpg')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "20px",
+  position: "relative",
+},
 
   heroCard: {
     background: "rgba(0,0,0,0.72)",

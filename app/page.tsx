@@ -23,7 +23,8 @@ export default function Home() {
           <h2 style={styles.h2}>O nás</h2>
 
           <p style={styles.text}>
-            Zabýváme se profesionální přepravou sypkých materiálů a zemních prací
+            Zabýváme se profesionální přepravou sypkých materiálů,
+            odvozem stavební suti a zemních prací
             ve velkoobjemových kontejnerech.
           </p>
 
@@ -32,7 +33,9 @@ export default function Home() {
           </p>
 
           <p style={styles.text}>
-            Každou zakázku řešíme individuálně podle typu materiálu a požadavků zákazníka.
+            Nabízíme rychlé přistavení kontejnerů,
+            individuální přístup a spolehlivou dopravu
+            po domluvě.
           </p>
         </div>
       </section>
@@ -44,10 +47,11 @@ export default function Home() {
 
           <div style={styles.list}>
             <p>🚛 Přeprava sypkých materiálů</p>
-            <p>📦 Velkoobjemové kontejnery (až 80 m³)</p>
+            <p>📦 Velkoobjemové kontejnery až 80 m³</p>
             <p>🏗️ Odvoz stavební suti a zeminy</p>
-            <p>⚡ Rychlé přistavení kontejneru</p>
-            <p>📍 Doprava Krnov a okolí</p>
+            <p>⚡ Rychlé přistavení kontejnerů</p>
+            <p>📍 Krnov a okolí</p>
+            <p>📞 Cena po telefonické domluvě</p>
           </div>
         </div>
       </section>
@@ -57,19 +61,27 @@ export default function Home() {
         <h2 style={styles.h2}>Naše technika</h2>
 
         <div style={styles.gallery}>
-          <img src="/hero1.jpg" />
-          <img src="/preprava.jpg" />
-          <img src="/kontejner.jpg" />
+          <img src="/kamion1.jpg" style={styles.img} />
+          <img src="/kamion2.jpg" style={styles.img} />
+          <img src="/kamion3.jpg" style={styles.img} />
+          <img src="/kamion4.jpg" style={styles.img} />
+          <img src="/kamion5.jpg" style={styles.img} />
+          <img src="/kamion6.jpg" style={styles.img} />
         </div>
       </section>
 
       {/* KONTAKT */}
       <section style={styles.center}>
-        <div style={styles.card}>
+        <div style={styles.contactCard}>
           <h2 style={styles.h2}>Kontakt</h2>
 
-          <p style={styles.text}>📍 Opavská 593/61, Krnov</p>
-          <p style={styles.text}>📞 +420 737 88 66 32</p>
+          <p style={styles.contactText}>
+            📍 Opavská 593/61, Krnov
+          </p>
+
+          <p style={styles.phone}>
+            📞 +420 737 88 66 32
+          </p>
 
           <p style={styles.highlight}>
             💰 Cena vždy po telefonické domluvě
@@ -84,106 +96,148 @@ export default function Home() {
 const styles: any = {
 
   page: {
-    fontFamily: "Arial",
+    fontFamily: "Arial, sans-serif",
     background: "#0b0f14",
     color: "white",
   },
 
+  /* HERO */
   hero: {
-    height: "90vh",
+    height: "92vh",
     backgroundImage: "url('/hero1.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    padding: "20px",
   },
 
   heroCard: {
-    background: "rgba(0,0,0,0.75)",
+    background: "rgba(0,0,0,0.72)",
     padding: "50px",
-    borderRadius: "18px",
+    borderRadius: "20px",
     textAlign: "center",
-    maxWidth: "700px",
+    maxWidth: "760px",
+    backdropFilter: "blur(4px)",
+    border: "1px solid rgba(255,255,255,0.1)",
   },
 
   title: {
-    fontSize: "58px",
-    marginBottom: "10px",
+    fontSize: "60px",
+    marginBottom: "15px",
+    letterSpacing: "2px",
   },
 
   subtitle: {
-    fontSize: "18px",
-    opacity: 0.85,
+    fontSize: "20px",
+    opacity: 0.9,
+    lineHeight: "1.6",
   },
 
   cta: {
-    marginTop: "20px",
-    fontSize: "20px",
+    marginTop: "25px",
+    fontSize: "24px",
     fontWeight: "bold",
     color: "#ffb300",
   },
 
+  /* SECTION */
   center: {
     display: "flex",
     justifyContent: "center",
-    padding: "70px 20px",
+    padding: "80px 20px",
   },
 
   card: {
-    maxWidth: "750px",
+    maxWidth: "820px",
     background: "#111827",
-    padding: "35px",
-    borderRadius: "16px",
+    padding: "40px",
+    borderRadius: "20px",
     textAlign: "center",
-    lineHeight: "1.7",
-    border: "1px solid #222b38",
+    border: "1px solid #1f2937",
+    boxShadow: "0 0 30px rgba(0,0,0,0.3)",
   },
 
   darkCard: {
-    maxWidth: "750px",
+    maxWidth: "820px",
     background: "#0f172a",
-    padding: "35px",
-    borderRadius: "16px",
+    padding: "40px",
+    borderRadius: "20px",
     textAlign: "center",
-    lineHeight: "1.8",
     border: "1px solid #243041",
+    boxShadow: "0 0 30px rgba(0,0,0,0.3)",
+  },
+
+  contactCard: {
+    maxWidth: "820px",
+    background: "#111827",
+    padding: "40px",
+    borderRadius: "20px",
+    textAlign: "center",
+    border: "1px solid #243041",
+    boxShadow: "0 0 30px rgba(0,0,0,0.3)",
   },
 
   h2: {
-    fontSize: "34px",
-    marginBottom: "20px",
+    fontSize: "38px",
+    marginBottom: "25px",
   },
 
   text: {
-    opacity: 0.85,
-    fontSize: "16px",
-    marginBottom: "12px",
+    fontSize: "18px",
+    opacity: 0.9,
+    lineHeight: "1.9",
+    marginBottom: "20px",
   },
 
   highlight: {
     color: "#ffb300",
     fontWeight: "bold",
-    margin: "15px 0",
+    fontSize: "18px",
+    marginTop: "15px",
   },
 
   list: {
     textAlign: "left",
-    maxWidth: "500px",
+    maxWidth: "520px",
     margin: "0 auto",
-    lineHeight: "2",
+    lineHeight: "2.3",
+    fontSize: "18px",
   },
 
+  /* GALERIE */
   gallerySection: {
-    padding: "70px 20px",
+    padding: "80px 20px",
     textAlign: "center",
   },
 
   gallery: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "15px",
-    maxWidth: "900px",
-    margin: "30px auto 0",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "18px",
+    maxWidth: "1200px",
+    margin: "40px auto 0",
+  },
+
+  img: {
+    width: "100%",
+    height: "260px",
+    objectFit: "cover",
+    borderRadius: "16px",
+    border: "1px solid #1f2937",
+    transition: "0.3s",
+  },
+
+  contactText: {
+    fontSize: "18px",
+    marginBottom: "15px",
+  },
+
+  phone: {
+    fontSize: "28px",
+    fontWeight: "bold",
+    color: "#ffb300",
+    marginBottom: "20px",
   },
 };
